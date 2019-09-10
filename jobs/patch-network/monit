@@ -3,7 +3,7 @@
     {
       "name": "patch-network",
       "executable": "powershell",
-      "args": ["C:\\var\\vcap\\jobs\\patch-network\\patch-network.ps1"],
+      "args": ["C:\\var\\vcap\\jobs\\patch-network\\bin\\patch-network.ps1"],
       "env": {}
     }
   ]

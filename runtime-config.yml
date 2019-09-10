@@ -1,0 +1,12 @@
+---
+releases:
+- name: "windows-network-fix"
+  version: "1.0"
+addons:
+- name: patch-windows-networking
+  jobs:
+  - name: patch-network
+    release: windows-network-fix
+  include:
+    stemcell:
+    - os: windows2019

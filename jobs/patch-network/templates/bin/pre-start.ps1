@@ -4,6 +4,7 @@ ForEach( $a in $n ){
     $a.Ipv4Address =  $a.Ipv4Address.IpAddress
 		$a.Ipv4DefaultGateway = $a.Ipv4DefaultGateway.NextHop
     $a.DNSServer = $a.DNSServer.where({$_.AddressFamily -eq 2}).ServerAddresses
+    $a.Netmask = (Get-NetIPAddress).Where({$_.IPAddress -eq $a.IPv4Address}).
 }
 
 $n
