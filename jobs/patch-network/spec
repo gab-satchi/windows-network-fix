@@ -1,0 +1,9 @@
+---
+name: patch-network
+
+templates:
+  patch-network.ps1: patch-network.ps1
+
+packages: []
+
+properties: {}
