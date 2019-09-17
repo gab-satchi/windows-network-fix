@@ -4,7 +4,7 @@ do {
   $hnsInterfaceCreated = (Get-NetAdapter).Where({$_.Name -Eq "vEthernet (Ethernet0)"}).Count -gt 0
 } while ($hnsInterfaceCreated -eq $false)
 
-$config = (cat /var/vcap/bosh/settings.json | ConvertFrom-JSON).networks.default
+$config = (cat /var/vcap/bosh/settings.json | ConvertFrom-JSON).networks.infra
 
 netsh interface ip set address "vEthernet (Ethernet0)" static $config.ip $config.netmask $config.gateway
 
