@@ -1,0 +1,12 @@
+---
+name: fix-pause-image
+
+templates:
+  bin/pre-start.ps1.erb: bin/pre-start.ps1
+
+packages: []
+
+properties:
+  pause_image:
+    description: The location of the Windows pause image
+    example: my.container.registry.co/windows/pause:1809

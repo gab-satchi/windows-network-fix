@@ -1,12 +1,15 @@
 ---
 releases:
 - name: "windows-network-fix"
-  version: "1.0"
+  version: "1.2"
 addons:
-- name: patch-windows-networking
+- name: windows-hotfixes
   jobs:
   - name: patch-network
     release: windows-network-fix
+  - name: fix-pause-image
+    release: windows-network-fix
+    properties:
+      pause_image: gcr.io/cf-london-servces-k8s/k8s/pause@sha256:241c7668bf4b1bec0a416ea33c2ec9563e9b31d88c66b27aa23420fc5904967c
   include:
-    stemcell:
-    - os: windows2019
+    stemcell: [os: windows2019]

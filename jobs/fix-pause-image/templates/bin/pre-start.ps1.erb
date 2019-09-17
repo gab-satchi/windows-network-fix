@@ -1,0 +1,2 @@
+$file = '/var/vcap/jobs/kubelet-windows/bin/kubelet_ctl.ps1'
+(Get-Content $file) -replace 'kubeletwin/pause', "<%= p("pause_image") %>" | Set-Content $file
